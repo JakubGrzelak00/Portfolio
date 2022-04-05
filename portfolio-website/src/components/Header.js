@@ -5,13 +5,10 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="HeaderLineLeft"></div>
-      <div className="HeaderCircleContainer">
-        <div className="HeaderCircle" />
-        <div className="CircleShadowsContainer">
-          <div className="HeaderCircleShadowTop"></div>
-          <div className="HeaderCircleShadowBottomContainer">
-            <div className="HeaderCircleShadowBottom"></div>
-          </div>
+      <div className="HeaderBracketsContainer">
+        <div className="HeaderBrackets"></div>
+        <div className="HeaderBracketsShadow">
+          <p className="Dots"></p>
         </div>
       </div>
       <div className="HeaderLineRight"></div>

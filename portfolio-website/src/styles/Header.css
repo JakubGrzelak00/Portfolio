@@ -1,71 +1,21 @@
 .Header {
+  margin-top: 2%;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .HeaderLineLeft {
-  animation-duration: 1s;
   animation: slidein 1.5s linear 1;
-  width: 47.5%;
+  width: 47.5vw;
   height: 1vh;
   border-bottom: 1px solid #a4a4a4;
 }
 .HeaderLineRight {
   animation: slidein 1.5s linear 1;
-  width: 47.5%;
+  width: 47.5vw;
   height: 1vh;
   border-bottom: 1px solid #a4a4a4;
-}
-
-.HeaderCircleContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.HeaderCircle {
-  border: 1px solid #a4a4a4;
-  border-radius: 100%;
-  height: 5vw;
-  width: 5vw;
-}
-
-.CircleShadowsContainer {
-  position: absolute;
-  top: 0;
-}
-
-.HeaderCircleShadowTopContainer {
-  width: 6vw;
-  height: 2.7vw;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.HeaderCircleShadowTop {
-  background-color: black;
-
-  animation: draw-circle 2s linear 1;
-}
-
-.HeaderCircleShadowBottomContainer {
-  width: 6vw;
-  height: 2.7vw;
-
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-}
-
-.HeaderCircleShadowBottom {
-  background-color: black;
-
-  animation: draw-circle 2s linear 1;
 }
 
 @keyframes slidein {
@@ -73,21 +23,67 @@
     width: 0%;
   }
   to {
-    width: 47.5%;
+    width: 47.5vw;
   }
 }
 
-@keyframes draw-circle {
+.HeaderBracketsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vw;
+  height: 5vw;
+}
+.HeaderBrackets {
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+  border: 1px solid #a4a4a4;
+  border-radius: 15%;
+}
+.HeaderBracketsShadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1;
+  height: 5.2vw;
+  width: 3vw;
+  background-color: black;
+
+  animation: shrink-header-brackets-shadow 3s linear 1;
+}
+
+@keyframes shrink-header-brackets-shadow {
   0% {
-    width: 6vw;
-    height: 2.8vw;
+    width: 5vw;
   }
-  75% {
-    width: 6vw;
-    height: 2.8vw;
+  50% {
+    width: 5vw;
   }
   100% {
-    width: 0vw;
-    height: 2.8vw;
+    width: 3vw;
+  }
+}
+
+.Dots::before {
+  font-size: 150%;
+  color: rgb(252, 252, 142);
+  animation: typing 1.5s 3s infinite linear;
+  content: "";
+}
+
+@keyframes typing {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  100% {
+    content: "...";
   }
 }
